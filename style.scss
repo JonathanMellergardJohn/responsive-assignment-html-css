@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+// variables
+
+    // colors
+$c-theme: #20D3C2;
+$c-theme-light: #EDFCFA;
+$c-theme-dark: #0E153D;
+$c-dark: #080C24;
+$c-grey-0: #AAAAAA;
+$c-grey-1: #CCCCCC;
+$c-grey-2: #E3E3E3;
+$-c-grey-3: #EEEEEE;
+$-c-grey-4: #F6F6F6;
+$c-white: #FFFFFF;
+$-c-product-instock: #82D8C6;
+$-color-product-outofstock: #FE6C6C;
+    // fonts
+$f-family-play: 'Play', sans-serif;
+$f-family-roboto: 'Roboto', sans-serif;
+$f-weight-regular: 400;
+$f-weight-medium: 500;
+$f-weight-bold: 700;
+    // border radius
+$radius-small: 8px;
+$radius-medium: 25px;
+
+// general
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
