@@ -25,9 +25,27 @@ $f-weight-bold: 700;
 $radius-small: 8px;
 $radius-medium: 25px;
 
-// general
+// editing tools
+
+// creates border around all elements 
+// * {
+//     border: 1px solid red;
+// }
+
+// general 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+.navbar {
+    display: flex;
+    background-color: $c-theme;
+    font-size: 3rem;
+    justify-content: space-between;
+    
+
+}
+.logo-space__logo {
+
 }

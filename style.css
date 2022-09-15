@@ -3,4 +3,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  background-color: #20D3C2;
+  font-size: 3rem;
+  justify-content: space-between;
 }/*# sourceMappingURL=style.css.map */
