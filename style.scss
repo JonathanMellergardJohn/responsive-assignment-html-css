@@ -39,13 +39,29 @@ $radius-medium: 25px;
     box-sizing: border-box;
 }
 .navbar {
-    display: flex;
+    color: $c-dark;
     background-color: $c-theme;
-    font-size: 3rem;
+    font-size: 2.5rem;
+}
+.navbar__displayspace {
+    margin: auto;
+    display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    max-width: 1200px;
+}
+.dropdown {
+    margin: 0.5rem 1rem;
+}
+.link-collection {
+    margin: 0.5rem 1rem;
+}
+.logo-space {
 
 }
-.logo-space__logo {
+.logo-space__link {
+    display: block;
 
+}
+.logo-space__img {
 }
