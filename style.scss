@@ -37,13 +37,15 @@ $radius-medium: 25px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: $f-family-roboto;
+    color: $c-dark;
 }
 .navbar {
-    color: $c-dark;
     background-color: $c-theme;
+    color: $c-dark;
     font-size: 2.5rem;
 }
-.navbar__displayspace {
+.navbar__body {
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -64,8 +66,40 @@ $radius-medium: 25px;
     margin: 0.5rem;
     display: block;
     width: 80%;
-
 }
 .logo-space__img {
     width: 100%;
+}
+.showcase {
+    background-color: $-c-grey-3;
+    position: relative;
+    z-index: 5;
+}
+.showcase__body {
+    z-index: 15;
+}
+.showcase__title {
+    font-family: $f-family-play;
+    font-size: 3rem;
+}
+.showcase__title--highlight {
+    color: $c-theme;
+    font-weight: $f-weight-bold;
+}
+.showcase__visual {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 100%;
+}
+.btn {
+    text-align: center;
+    text-justify: center;
+    background-color: $c-white;
+    color: $c-theme;
+    text-decoration: none;
+    font-weight: $f-weight-medium;
+    padding: 0.4rem;
+    border-radius: $radius-medium;
 }

@@ -3,15 +3,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #080C24;
 }
 
 .navbar {
-  color: #080C24;
   background-color: #20D3C2;
+  color: #080C24;
   font-size: 2.5rem;
 }
 
-.navbar__displayspace {
+.navbar__body {
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -40,4 +42,43 @@
 
 .logo-space__img {
   width: 100%;
+}
+
+.showcase {
+  background-color: #EEEEEE;
+  position: relative;
+  z-index: 5;
+}
+
+.showcase__body {
+  z-index: 15;
+}
+
+.showcase__title {
+  font-family: "Play", sans-serif;
+  font-size: 3rem;
+}
+
+.showcase__title--highlight {
+  color: #20D3C2;
+  font-weight: 700;
+}
+
+.showcase__visual {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+  width: 100%;
+}
+
+.btn {
+  text-align: center;
+  text-justify: center;
+  background-color: #FFFFFF;
+  color: #20D3C2;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem;
+  border-radius: 25px;
 }/*# sourceMappingURL=style.css.map */
