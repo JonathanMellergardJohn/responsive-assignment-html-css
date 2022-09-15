@@ -27,6 +27,17 @@
   margin: 0.5rem 1rem;
 }
 
+.logo-space {
+  display: flex;
+  justify-content: center;
+}
+
 .logo-space__link {
+  margin: 0.5rem;
   display: block;
+  width: 80%;
+}
+
+.logo-space__img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
