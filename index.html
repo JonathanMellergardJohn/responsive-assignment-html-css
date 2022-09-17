@@ -4,62 +4,70 @@
     <meta charset="UTF-8">
     <meta name="description" content="Tutorial">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tutorial</title>
+    <title>Kenkata - Shopping is MORE FUN</title>
     <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
 
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <nav class="navbar">
             <div class="navbar__body">
                 <div class="dropdown">
                     <i class="fa-light fa-bars"></i>
                 </div>
-                <div class="link-collection">
-                    <i class="fa-light fa-user"></i>
-                    <i class="fa-light fa-magnifying-glass"></i>
-                    <i class="fa-light fa-heart"></i>
-                    <i class="fa-light fa-bag-shopping"></i>
+                <div class="navbar__link-collection">
+                    <a class="navbar__link" href="#"><i class="fa-light fa-user"></i></a>
+                    <a class="navbar__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
+                    <a class="navbar__link" href="#"><i class="fa-light fa-heart"></i></a>
+                    <a class="navbar__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
                 </div>
             </div>
         </nav>
         <section class="logo-space">
             <a class="logo-space__link" href="index.html"><img class="logo-space__img" src="images/logotype.svg" alt="Kenkata Webshop"></a>
         </section>
+    </header> -->
+
+    <header class="header">
+            <!-- Logo -->
+            <div class="header__links-container">
+                <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
+                <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
+                <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
+                <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
+            </div>
+            <!-- Hamburger icon -->
+            <input class="side-menu" type="checkbox" id="side-menu"/>
+            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <!-- Menu -->
+            <nav class="hamburger-menu__dropdown-body">
+                <ul class="menu">
+                    <li><a href="#">Service Benefits</a></li>
+                    <li><a href="#">Shop by Category</a> </li>
+                    <li><a href="#">New Arrivals</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Social Media</a></li>
+
+                </ul>
+            </nav>
     </header>
 
+    <!-- main content -->
     <main>
-        <section class="showcase">
+        <!-- <section class="showcase">
+            <img class="showcase__visual" src="images/Banner-thumb.png" alt="People ready to shop">
             <div class="showcase__body">
                 <h1 class="showcase__title">Shopping is <span class="showcase__title--highlight">MORE FUN</span> </h1>
+                <p class="showcase__text">Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus. Quisque quis erat sed</p>
+                <a class="showcase__btn btn" href="#">SHOP NOW</a>
+                
             </div>
-            <p class="showcase__text">Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus. Quisque quis erat sed</p>
-            <a class="btn" href="#">SHOP NOW</a>
-            <img class="showcase__visual" src="images/showcase-image.svg" alt="two people ready to shop">
-        </section>
-
-
-
-        <section class="service-info"></section>
-        <section class="shop-by-category">
-            <div class="section-title"></div>
-            <div class="products"></div>
-        </section>
-        <section class="new-arrivals">
-            <div class="section-title"></div>
-            <div class="products"></div>
-        </section>
-        <section class="special-offer"></section>
-        <section class="featured-products">
-            <div class="section-title"></div>
-            <div class="products"></div>
-        </section>
-        <section class="flash-sale"></section>
+            
+        </section> -->
+        <!-- <div class="extraspace"></div> -->
     </main>
-    <footer>
-        <section class="general-information"></section>
-        <section class="copyright-information"></section>
-    </footer>
+       
 </body>
 </html>

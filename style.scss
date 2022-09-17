@@ -38,68 +38,199 @@ $radius-medium: 25px;
     padding: 0;
     box-sizing: border-box;
     font-family: $f-family-roboto;
-    color: $c-dark;
+    z-index: 10;
 }
-.navbar {
-    background-color: $c-theme;
-    color: $c-dark;
-    font-size: 2.5rem;
+a {
+    text-decoration: none;
 }
-.navbar__body {
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
+ul {
+    list-style: none;
 }
-.dropdown {
-    margin: 0.5rem 1rem;
-}
-.link-collection {
-    margin: 0.5rem 1rem;
-}
+
+// .header {
+//     position: sticky;
+//     top: 0;
+//     left: 0;
+//     z-index: 20;
+// }
+// .btn {
+//     text-align: center;
+//     text-justify: center;
+//     background-color: $c-white;
+//     color: $c-theme;
+//     text-decoration: none;
+//     font-weight: $f-weight-medium;
+//     padding: 0.4rem;
+//     border-radius: $radius-medium;
+// }
+
+// .dropdown {
+//     margin: 0.5rem 1rem;
+// }
+
+// .navbar {
+//     background-color: $c-theme;
+//     color: $c-dark;
+//     font-size: 2.5rem;
+//     &__body {
+//         margin: auto;
+//         display: flex;
+//         justify-content: space-between;
+//         align-items: center;
+//         max-width: 1200px;
+//     }
+//     &__link-collection {
+//         margin: 0.5rem 1rem;
+//     }
+//     &__link {
+
+//     }
+// }
 .logo-space {
+    background-color: $c-white;
     display: flex;
     justify-content: center;
+    &__link {
+        margin: 0.5rem;
+        display: block;
+        width: 80%;
+    }
+    &__img {
+        width: 100%;
+        color: $c-white;
+    }
 }
-.logo-space__link {
-    margin: 0.5rem;
-    display: block;
-    width: 80%;
-}
-.logo-space__img {
-    width: 100%;
-}
+
 .showcase {
     background-color: $-c-grey-3;
     position: relative;
-    z-index: 5;
+    text-align: center;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__title {
+        font-family: $f-family-play;
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        &--highlight {
+            color: $c-theme;
+            font-weight: $f-weight-bold;
+            }  
+    }
+    &__text {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+    }
+    &__btn {
+        margin-bottom: 2rem;
+    }
+    &__visual {
+        width: 100%;
+    }
+
 }
-.showcase__body {
-    z-index: 15;
+.extraspace {
+    height: 2000px;
+    background-color: $-c-grey-3;
 }
-.showcase__title {
-    font-family: $f-family-play;
-    font-size: 3rem;
-}
-.showcase__title--highlight {
-    color: $c-theme;
-    font-weight: $f-weight-bold;
-}
-.showcase__visual {
-    position: absolute;
+/* Header */
+.header{
+    background-color: $c-theme;
+    box-shadow: 1px 1px 5px 0px $c-grey-0;
+    position: sticky;
     top: 0;
-    left: 0;
-    z-index: 4;
+    width: 100%;
+    &__links-container{
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+    &__link {
+        color: $c-white;
+        margin: 0.5rem;
+    }
+}
+
+/* Nav menu */
+.hamburger-menu {
+    &__dropdown-body{
+        width: 100%;
+        position: fixed;
+        background-color: $c-theme;
+        overflow: hidden;
+    }
+    // __dropdown-body class doubled here to hide menu when hamburger
+    // is unused. There should be a better way to do this, probably??
+    &__dropdown-body{
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+}
+.side-menu {
+    display: none;
+}
+.menu a{
+    display: block;
+    padding: 30px;
+    color: $c-white;
+}
+.menu a:hover{
+    background-color: $c-theme-light;
+}
+/* Menu Icon */
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 24.5px 20px 24.5px 20px;
+}/* Style label tag */
+
+.hamb-line {
+    background: $c-white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after{
+    background: $c-white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
     width: 100%;
 }
-.btn {
-    text-align: center;
-    text-justify: center;
-    background-color: $c-white;
-    color: $c-theme;
-    text-decoration: none;
-    font-weight: $f-weight-medium;
-    padding: 0.4rem;
-    border-radius: $radius-medium;
+.hamb-line::before{
+    top: 7px;
+}
+.hamb-line::after{
+    top: -7px;
+}
+
+
+/* Toggle menu icon */
+.side-menu:checked ~ nav{
+    max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top:0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top:0;
 }
