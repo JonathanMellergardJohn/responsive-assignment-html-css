@@ -4,7 +4,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
-  z-index: 10;
 }
 
 a {
@@ -30,45 +29,18 @@ ul {
   color: #FFFFFF;
 }
 
-.showcase {
-  background-color: #EEEEEE;
-  position: relative;
-  text-align: center;
-}
-.showcase__body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.showcase__title {
-  font-family: "Play", sans-serif;
-  font-size: 3rem;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-.showcase__title--highlight {
+.button {
+  display: inline-block;
+  background-color: #FFFFFF;
   color: #20D3C2;
-  font-weight: 700;
+  font-weight: 500;
+  padding: 0.65rem 1rem 0.6rem 1rem;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
 }
-.showcase__text {
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
-}
-.showcase__btn {
-  margin-bottom: 2rem;
-}
-.showcase__visual {
-  width: 100%;
-}
-
-.extraspace {
-  height: 2000px;
-  background-color: #EEEEEE;
+.button:hover {
+  background-color: #20D3C2;
+  color: #FFFFFF;
 }
 
 /* Header */
@@ -79,6 +51,7 @@ ul {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 999;
 }
 .header__links-container {
   display: inline-block;
@@ -101,36 +74,56 @@ ul {
   max-height: 0;
   transition: max-height 0.5s ease-out;
 }
-
-.side-menu {
+.hamburger-menu__checkbox {
   display: none;
 }
-
-.menu a {
+.hamburger-menu__checkbox:checked ~ .hamburger-menu__dropdown-body {
+  max-height: 100%;
+}
+.hamburger-menu__checkbox:checked ~ .hamburger-menu__hamburger .hamburger-menu__hamb-line {
+  background: transparent;
+}
+.hamburger-menu__checkbox:checked ~ .hamburger-menu__hamburger .hamburger-menu__hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.hamburger-menu__checkbox:checked ~ .hamburger-menu__hamburger .hamburger-menu__hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.hamburger-menu__hamburger {
+  cursor: pointer;
+  float: right;
+  padding: 24.5px 20px 24.5px 20px;
+}
+.hamburger-menu__list-item {
   display: block;
   padding: 30px;
   color: #FFFFFF;
 }
-
-.menu a:hover {
-  background-color: #EDFCFA;
+.hamburger-menu__list-item:hover {
+  background-color: #caf7f1;
+  color: #0E153D;
 }
-
-/* Menu Icon */
-.hamb {
-  cursor: pointer;
-  float: right;
-  padding: 24.5px 20px 24.5px 20px;
-} /* Style label tag */
-.hamb-line {
+.hamburger-menu__hamb-line {
   background: #FFFFFF;
   display: block;
   height: 2px;
   position: relative;
   width: 24px;
-} /* Style span tag */
-.hamb-line::before,
-.hamb-line::after {
+}
+.hamburger-menu__hamb-line::before {
+  top: 7px;
+  background: #FFFFFF;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamburger-menu__hamb-line::after {
+  top: -7px;
   background: #FFFFFF;
   content: "";
   display: block;
@@ -140,29 +133,51 @@ ul {
   width: 100%;
 }
 
-.hamb-line::before {
-  top: 7px;
+.logo-space {
+  background-color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+}
+.logo-space__link {
+  margin: 0.5rem;
+  display: block;
+  width: 80%;
+}
+.logo-space__img {
+  width: 100%;
+  color: #FFFFFF;
 }
 
-.hamb-line::after {
-  top: -7px;
+.showcase {
+  background-color: #EEEEEE;
+  position: relative;
+  text-align: center;
+}
+.showcase__image {
+  width: 100%;
+}
+.showcase__text-container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.showcase__page-title {
+  font-family: "Play", sans-serif;
+  font-size: 2.5rem;
+  margin: 10%;
+}
+.showcase__text {
+  font-size: 0.8rem;
+  margin: 10%;
+}
+.showcase--emphasize-text {
+  display: inline-block;
+  color: #20D3C2;
+  font-weight: 700;
 }
 
-/* Toggle menu icon */
-.side-menu:checked ~ nav {
-  max-height: 100%;
-}
-
-.side-menu:checked ~ .hamb .hamb-line {
-  background: transparent;
-}
-
-.side-menu:checked ~ .hamb .hamb-line::before {
-  transform: rotate(-45deg);
-  top: 0;
-}
-
-.side-menu:checked ~ .hamb .hamb-line::after {
-  transform: rotate(45deg);
-  top: 0;
+.extraspace {
+  height: 2000px;
 }/*# sourceMappingURL=style.css.map */

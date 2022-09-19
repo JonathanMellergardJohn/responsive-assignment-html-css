@@ -28,7 +28,7 @@
             <a class="logo-space__link" href="index.html"><img class="logo-space__img" src="images/logotype.svg" alt="Kenkata Webshop"></a>
         </section>
     </header> -->
-
+<!-- header and hamburger menu taken from https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
     <header class="header">
             <!-- Logo -->
             <div class="header__links-container">
@@ -38,17 +38,17 @@
                 <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
             </div>
             <!-- Hamburger icon -->
-            <input class="side-menu" type="checkbox" id="side-menu"/>
-            <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
+            <input class="hamburger-menu__checkbox" type="checkbox" id="hamburger-menu__checkbox"/>
+            <label class="hamburger-menu__hamburger" for="hamburger-menu__checkbox"><span class="hamburger-menu__hamb-line"></span></label>
             <!-- Menu -->
             <nav class="hamburger-menu__dropdown-body">
-                <ul class="menu">
-                    <li><a href="#">Service Benefits</a></li>
-                    <li><a href="#">Shop by Category</a> </li>
-                    <li><a href="#">New Arrivals</a></li>
-                    <li><a href="#">Newsletter</a></li>
-                    <li><a href="#">Contact Us</a></li>
-                    <li><a href="#">Social Media</a></li>
+                <ul class="hamburger-menu__menu-list">
+                    <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
+                    <li><a class="hamburger-menu__list-item" href="#">Shop by Category</a> </li>
+                    <li><a class="hamburger-menu__list-item" href="#">New Arrivals</a></li>
+                    <li><a class="hamburger-menu__list-item" href="#">Newsletter</a></li>
+                    <li><a class="hamburger-menu__list-item" href="#">Contact Us</a></li>
+                    <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
 
                 </ul>
             </nav>
@@ -56,17 +56,19 @@
 
     <!-- main content -->
     <main>
-        <!-- <section class="showcase">
-            <img class="showcase__visual" src="images/Banner-thumb.png" alt="People ready to shop">
-            <div class="showcase__body">
-                <h1 class="showcase__title">Shopping is <span class="showcase__title--highlight">MORE FUN</span> </h1>
-                <p class="showcase__text">Vivamus dignissim a ex eu ornare. Ut fermentum orci vel diam ultricies faucibus. Quisque quis erat sed</p>
-                <a class="showcase__btn btn" href="#">SHOP NOW</a>
-                
+        <section class="showcase">
+            <img class="showcase__image" src="images/showcase-image.svg" alt="">
+            <div class="showcase__text-container">
+                <h1 class="showcase__page-title">Shopping is <span class="showcase--emphasize-text">MORE FUN</span></h1>
+                <p class="showcase__text">Vivamus dignissim a ex eu ornare. 
+                Ut fermentum orci vel diam ultricies faucibus. 
+                Quisque quis erat sed
+                </p>
+                <a class="showcase__button button" href="#">SHOP NOW</a>
             </div>
             
-        </section> -->
-        <!-- <div class="extraspace"></div> -->
+        </section>
+        <div class="extraspace"></div>
     </main>
        
 </body>

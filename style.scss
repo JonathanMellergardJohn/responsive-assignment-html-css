@@ -4,7 +4,7 @@
 
     // colors
 $c-theme: #20D3C2;
-$c-theme-light: #EDFCFA;
+$c-theme-light: #caf7f1;
 $c-theme-dark: #0E153D;
 $c-dark: #080C24;
 $c-grey-0: #AAAAAA;
@@ -38,8 +38,8 @@ $radius-medium: 25px;
     padding: 0;
     box-sizing: border-box;
     font-family: $f-family-roboto;
-    z-index: 10;
 }
+
 a {
     text-decoration: none;
 }
@@ -47,45 +47,127 @@ ul {
     list-style: none;
 }
 
-// .header {
-//     position: sticky;
-//     top: 0;
-//     left: 0;
-//     z-index: 20;
-// }
-// .btn {
-//     text-align: center;
-//     text-justify: center;
-//     background-color: $c-white;
-//     color: $c-theme;
-//     text-decoration: none;
-//     font-weight: $f-weight-medium;
-//     padding: 0.4rem;
-//     border-radius: $radius-medium;
-// }
+.logo-space {
+    background-color: $c-white;
+    display: flex;
+    justify-content: center;
+    &__link {
+        margin: 0.5rem;
+        display: block;
+        width: 80%;
+    }
+    &__img {
+        width: 100%;
+        color: $c-white;
+    }
+}
+// utilities
 
-// .dropdown {
-//     margin: 0.5rem 1rem;
-// }
+.button {
+    display: inline-block;
+    background-color: $c-white;
+    color: $c-theme;
+    font-weight: $f-weight-medium;
+    padding: 0.65rem 1rem 0.6rem 1rem;
+    border-radius: $radius-medium;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        background-color: $c-theme;
+        color: $c-white;
+    }
+}
 
-// .navbar {
-//     background-color: $c-theme;
-//     color: $c-dark;
-//     font-size: 2.5rem;
-//     &__body {
-//         margin: auto;
-//         display: flex;
-//         justify-content: space-between;
-//         align-items: center;
-//         max-width: 1200px;
-//     }
-//     &__link-collection {
-//         margin: 0.5rem 1rem;
-//     }
-//     &__link {
-
-//     }
-// }
+/* Header */
+.header{
+    background-color: $c-theme;
+    box-shadow: 1px 1px 5px 0px $c-grey-0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    &__links-container{
+        display: inline-block;
+        font-size: 1.5rem;
+        margin: 10px;
+    }
+    &__link {
+        color: $c-white;
+        margin: 0.5rem;
+    }
+}
+/* Nav menu */
+.hamburger-menu {
+    &__dropdown-body{
+        width: 100%;
+        position: fixed;
+        background-color: $c-theme;
+        overflow: hidden;
+    }
+    // __dropdown-body class doubled here to hide menu when hamburger
+    // is unused. There should be a better way to do this, probably??
+    &__dropdown-body{
+        max-height: 0;
+        transition: max-height .5s ease-out;
+    }
+    &__checkbox {
+        display: none;
+        &:checked ~ .hamburger-menu__dropdown-body{
+            max-height: 100%;
+        }
+        &:checked ~ .hamburger-menu__hamburger .hamburger-menu__hamb-line {
+            background: transparent;
+        }
+        &:checked ~ .hamburger-menu__hamburger .hamburger-menu__hamb-line::before {
+            transform: rotate(-45deg);
+            top:0;
+        }
+        &:checked ~ .hamburger-menu__hamburger .hamburger-menu__hamb-line::after {
+            transform: rotate(45deg);
+            top:0;
+        }
+    }
+    &__hamburger {
+        cursor: pointer;
+        float: right;
+        padding: 24.5px 20px 24.5px 20px;
+    }
+    &__list-item{
+        display: block;
+        padding: 30px;
+        color: $c-white;
+        &:hover{
+            background-color: $c-theme-light;
+            color: $c-theme-dark;
+        }
+    }
+    &__hamb-line {
+        background: $c-white;
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 24px;
+        &::before{
+            top: 7px;
+            background: $c-white;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+        &::after{
+            top: -7px;
+            background: $c-white;
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .2s ease-out;
+            width: 100%;
+        }
+    }
+}
 .logo-space {
     background-color: $c-white;
     display: flex;
@@ -105,132 +187,32 @@ ul {
     background-color: $-c-grey-3;
     position: relative;
     text-align: center;
-    &__body {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+    &__image {
+        width: 100%;
+    }
+    &__text-container {
         position: absolute;
+        width: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
-    &__title {
+    &__page-title {
         font-family: $f-family-play;
-        font-size: 3rem;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-        &--highlight {
-            color: $c-theme;
-            font-weight: $f-weight-bold;
-            }  
+        font-size: 2.5rem;
+        margin: 10%;
     }
     &__text {
         font-size: 0.8rem;
-        margin-bottom: 1rem;
+        margin: 10%
     }
-    &__btn {
-        margin-bottom: 2rem;
+    &--emphasize-text {
+        display: inline-block;
+        color: $c-theme;
+        font-weight: $f-weight-bold;
     }
-    &__visual {
-        width: 100%;
-    }
-
 }
+
 .extraspace {
     height: 2000px;
-    background-color: $-c-grey-3;
-}
-/* Header */
-.header{
-    background-color: $c-theme;
-    box-shadow: 1px 1px 5px 0px $c-grey-0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    &__links-container{
-        display: inline-block;
-        font-size: 1.5rem;
-        margin: 10px;
-    }
-    &__link {
-        color: $c-white;
-        margin: 0.5rem;
-    }
-}
-
-/* Nav menu */
-.hamburger-menu {
-    &__dropdown-body{
-        width: 100%;
-        position: fixed;
-        background-color: $c-theme;
-        overflow: hidden;
-    }
-    // __dropdown-body class doubled here to hide menu when hamburger
-    // is unused. There should be a better way to do this, probably??
-    &__dropdown-body{
-        max-height: 0;
-        transition: max-height .5s ease-out;
-    }
-}
-.side-menu {
-    display: none;
-}
-.menu a{
-    display: block;
-    padding: 30px;
-    color: $c-white;
-}
-.menu a:hover{
-    background-color: $c-theme-light;
-}
-/* Menu Icon */
-.hamb{
-    cursor: pointer;
-    float: right;
-    padding: 24.5px 20px 24.5px 20px;
-}/* Style label tag */
-
-.hamb-line {
-    background: $c-white;
-    display: block;
-    height: 2px;
-    position: relative;
-    width: 24px;
-
-} /* Style span tag */
-
-.hamb-line::before,
-.hamb-line::after{
-    background: $c-white;
-    content: '';
-    display: block;
-    height: 100%;
-    position: absolute;
-    transition: all .2s ease-out;
-    width: 100%;
-}
-.hamb-line::before{
-    top: 7px;
-}
-.hamb-line::after{
-    top: -7px;
-}
-
-
-/* Toggle menu icon */
-.side-menu:checked ~ nav{
-    max-height: 100%;
-}
-.side-menu:checked ~ .hamb .hamb-line {
-    background: transparent;
-}
-.side-menu:checked ~ .hamb .hamb-line::before {
-    transform: rotate(-45deg);
-    top:0;
-}
-.side-menu:checked ~ .hamb .hamb-line::after {
-    transform: rotate(45deg);
-    top:0;
 }
