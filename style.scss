@@ -13,8 +13,8 @@ $c-grey-2: #E3E3E3;
 $-c-grey-3: #EEEEEE;
 $-c-grey-4: #F6F6F6;
 $c-white: #FFFFFF;
-$-c-product-instock: #82D8C6;
-$-color-product-outofstock: #FE6C6C;
+$-c-instock: #82D8C6;
+$-c-outofstock: #FE6C6C;
     // fonts
 $f-family-play: 'Play', sans-serif;
 $f-family-roboto: 'Roboto', sans-serif;
@@ -94,6 +94,12 @@ ul {
         color: $c-white;
         margin: 0.5rem;
     }
+    &__logo-container {
+        background-color: $c-white;
+    }
+    &__logo-image {
+        margin: 10px;
+    }
 }
 /* Nav menu */
 .hamburger-menu {
@@ -107,6 +113,7 @@ ul {
     // is unused. There should be a better way to do this, probably??
     &__dropdown-body{
         max-height: 0;
+        top: 48px;
         transition: max-height .5s ease-out;
     }
     &__checkbox {
@@ -215,4 +222,88 @@ ul {
 
 .extraspace {
     height: 2000px;
+}
+
+.product-card {
+    border-radius: $radius-small;
+    color: $c-white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: $c-grey-2;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    &__product-image {
+        height: 100%;
+        object-fit: fill;
+    }
+    &__menu-body {
+        background-color: $c-dark;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 87%;
+        transition: all .3s ease-in-out;
+        &:hover {
+            top: 0;
+            opacity: 0.6;
+        }
+        &:hover .product-card__product-info-container {
+            position: absolute;
+            top: 65%;
+        }
+        &:hover .product-card__icon-menu {
+            top: 4%;
+        }
+    }
+    &__product-info-container {
+        margin: 0.5rem 0.5rem;
+        position: absolute;
+        top: 1%;
+        transition: all 0.3s ease-in-out;
+    }
+    &__product-name {
+        margin: inherit;
+    }
+    &__product-category {
+        font-size: 0.8rem;
+        margin: inherit;
+        display: inline-block;
+        padding: 0.1rem 0.35rem;
+        border: 1px $c-white solid;
+    }
+    &__old-price {
+        font-size: 0.8rem;
+        text-decoration: line-through;
+        margin: inherit;
+    }
+    &__new-price {
+        color: $c-theme;
+        font-weight: $f-weight-medium;
+        margin: inherit;
+    }
+    &__icon-menu {
+        line-height: 1.5rem;
+        list-style: none;
+        position: absolute;
+        top: 30%;
+        right: 7%;
+        padding: 0.5rem 0.3rem 0.5rem 0.4rem;
+        transition: all 0.4s ease-in-out;
+        background-color: $c-white;
+        border-radius: $radius-medium;
+    }
+    &__icon {
+        color: $c-grey-0;
+        &--instock {
+            color: $-c-instock;
+        }
+        &--outofstock {
+            color: $-c-outofstock;
+        }
+        &:hover {
+            color: $c-theme;
+        }
+    }
 }

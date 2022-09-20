@@ -10,37 +10,19 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- <header class="header">
-        <nav class="navbar">
-            <div class="navbar__body">
-                <div class="dropdown">
-                    <i class="fa-light fa-bars"></i>
-                </div>
-                <div class="navbar__link-collection">
-                    <a class="navbar__link" href="#"><i class="fa-light fa-user"></i></a>
-                    <a class="navbar__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
-                    <a class="navbar__link" href="#"><i class="fa-light fa-heart"></i></a>
-                    <a class="navbar__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
-                </div>
-            </div>
-        </nav>
-        <section class="logo-space">
-            <a class="logo-space__link" href="index.html"><img class="logo-space__img" src="images/logotype.svg" alt="Kenkata Webshop"></a>
-        </section>
-    </header> -->
+
 <!-- header and hamburger menu taken from https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
     <header class="header">
-            <!-- Logo -->
             <div class="header__links-container">
                 <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
                 <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
                 <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
                 <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
             </div>
-            <!-- Hamburger icon -->
+
             <input class="hamburger-menu__checkbox" type="checkbox" id="hamburger-menu__checkbox"/>
             <label class="hamburger-menu__hamburger" for="hamburger-menu__checkbox"><span class="hamburger-menu__hamb-line"></span></label>
-            <!-- Menu -->
+
             <nav class="hamburger-menu__dropdown-body">
                 <ul class="hamburger-menu__menu-list">
                     <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
@@ -52,7 +34,10 @@
 
                 </ul>
             </nav>
-    </header>
+            <nav class="header__logo-container">
+                <img class="header__logo-image" src="images/logotype.svg" alt="">
+            </nav>
+    </header> 
 
     <!-- main content -->
     <main>
@@ -67,6 +52,29 @@
                 <a class="showcase__button button" href="#">SHOP NOW</a>
             </div>
             
+        </section>
+
+        <!-- service info -->
+        <section>
+            <div class="product-card">
+                <img class="product-card__product-image" src="images/products/blue-silk-flare-sleeved-top.png" alt="Blue silk flare sleeved top">
+                <div class="product-card__menu-body">
+                    <div class="product-card__product-info-container">
+                        <h3 class="product-card__product-name">Blue silk flare sleeved top</h3>
+                        <p class="product-card__product-category">Fashion</p>
+                        <p class="product-card__old-price">$50.00</p>
+                        <p class="product-card__new-price">$20.00</p>
+                    </div>
+                    <ul class="product-card__icon-menu">
+                        <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
+                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
+                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
+                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
         </section>
         <div class="extraspace"></div>
     </main>
