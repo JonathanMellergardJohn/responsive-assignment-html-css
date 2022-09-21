@@ -4,7 +4,7 @@
 
     // colors
 $c-theme: #20D3C2;
-$c-theme-light: #caf7f1;
+$c-theme-light: #d4f8f3;
 $c-theme-dark: #0E153D;
 $c-dark: #080C24;
 $c-grey-0: #AAAAAA;
@@ -33,13 +33,22 @@ $radius-medium: 25px;
 // }
 
 // general 
+
+// RESET
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: $f-family-roboto;
-}
 
+}
+body {
+    font-family: $f-family-roboto;
+    font-size: 12px;
+}
+h1, h2, h3, h4, h5, h5 {
+    font-weight: $f-weight-regular;
+    font-size: 12px;
+}
 a {
     text-decoration: none;
 }
@@ -76,6 +85,10 @@ ul {
         color: $c-white;
     }
 }
+.theme-color {
+    color: $c-theme;
+}
+
 
 /* Header */
 .header{
@@ -109,8 +122,8 @@ ul {
         background-color: $c-theme;
         overflow: hidden;
     }
-    // __dropdown-body class doubled here to hide menu when hamburger
-    // is unused. There should be a better way to do this, probably??
+    // '__dropdown-body' dubbleras här när 'hamburger' inte används.
+    //  Borde finnas bättre sätt att strukturera, kanske.
     &__dropdown-body{
         max-height: 0;
         top: 48px;
@@ -139,6 +152,11 @@ ul {
         padding: 24.5px 20px 24.5px 20px;
     }
     &__list-item{
+        // '_list-items' länkar till olika delar av sidan. Tyvärr stängs inte 
+        // hamburgermenyn automatiskt efter att användaren har tryckt på en länk.
+        // Funderar på om det skulle gå att lösa med att använda 'check-box hack' 
+        // igen, fast på länkarna. Men om meddelandet är kvar har jag inte lyckats, 
+        // inte hunnit. Eller glömt ta bort denna kommentar.
         display: block;
         padding: 30px;
         color: $c-white;
@@ -225,14 +243,15 @@ ul {
 }
 
 .product-card {
+    font-size: 12px;
     border-radius: $radius-small;
     color: $c-white;
     position: relative;
     display: flex;
     justify-content: center;
     background-color: $c-grey-2;
-    width: 300px;
-    height: 400px;
+    width: 170px;
+    height: 225px;
     overflow: hidden;
     &__product-image {
         height: 100%;
@@ -243,7 +262,8 @@ ul {
         width: 100%;
         height: 100%;
         position: absolute;
-        top: 87%;
+        top: 80.5%;
+        z-index: 50;
         transition: all .3s ease-in-out;
         &:hover {
             top: 0;
@@ -251,44 +271,51 @@ ul {
         }
         &:hover .product-card__product-info-container {
             position: absolute;
-            top: 65%;
+            top: 38%;
         }
         &:hover .product-card__icon-menu {
-            top: 4%;
+            top: 2%;
         }
     }
     &__product-info-container {
-        margin: 0.5rem 0.5rem;
+        font-weight: $f-weight-regular;
+        font-size: 12px;
+        margin: 0.2rem 0 0.5rem 0.5rem;
         position: absolute;
         top: 1%;
         transition: all 0.3s ease-in-out;
     }
     &__product-name {
-        margin: inherit;
+        width: 115px;
+        height: 28px;
+        margin-bottom: 1rem;
+
     }
     &__product-category {
-        font-size: 0.8rem;
-        margin: inherit;
+        font-size: 11px;
         display: inline-block;
         padding: 0.1rem 0.35rem;
         border: 1px $c-white solid;
+        margin-bottom: 1rem;
     }
     &__old-price {
-        font-size: 0.8rem;
+        font-size: 11px;
         text-decoration: line-through;
-        margin: inherit;
+        margin-bottom: 1rem;
+        &--hidden {
+            visibility: hidden;
+        }
     }
     &__new-price {
         color: $c-theme;
-        font-weight: $f-weight-medium;
-        margin: inherit;
+        font-weight: $f-weight-bold;
     }
     &__icon-menu {
         line-height: 1.5rem;
         list-style: none;
         position: absolute;
         top: 30%;
-        right: 7%;
+        right: 5%;
         padding: 0.5rem 0.3rem 0.5rem 0.4rem;
         transition: all 0.4s ease-in-out;
         background-color: $c-white;
@@ -305,5 +332,113 @@ ul {
         &:hover {
             color: $c-theme;
         }
+    }
+}
+
+.page-section {
+
+    background-color: $c-white;
+
+    &__content-container {
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &--small {
+            margin: 1rem;
+        }
+    }
+    &--content-centered {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__section-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    &__section-title {
+        font-family: $f-family-play;
+        font-size: 36px;
+        font-weight: $f-weight-bold;
+        margin-bottom: 0.5rem;
+        &--small {
+            font-size: 12px;
+        }
+    }
+    &__line {
+        width: 255px;
+        margin-bottom: 0.5rem;
+    }
+    &__section-preamble {
+        text-align: center;
+    }
+}
+
+.grid {
+    display: grid;
+
+    &--two-columns {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5px;
+    }
+    &--four-columns {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 5px;
+    }
+    &--two-by-two {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        column-gap: 5px;
+        row-gap: 5px;
+    }
+}
+.service-card {
+    background-color: $c-theme-light;
+    height: 85px;
+    width: 85px;
+    border-radius: $radius-small;
+    &__icon {
+        width: 100%;
+        padding: 1rem;
+    }
+}
+.category-card {
+    width: 170px;
+    height: 170px;
+    background-color: $c-grey-1;
+    position: relative;
+    border-radius: $radius-small;
+    overflow: hidden;
+    &__menu-body {
+        background-color: $c-dark;
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 85.5%;
+        right: 50%;
+        z-index: 50;
+        transition: all .15s ease-in-out;
+        border-radius: 0 $radius-small 0 0;
+        &:hover {
+            opacity: 0.6;
+            top: 70%;
+        }
+    }
+    &__category-info-container {
+        margin: 0.5rem 0.5rem;
+    }
+    &__category-name {
+        color: $c-theme;
+        font-weight: $f-weight-medium;
+        margin-bottom: 0.5rem;
+    }
+    &__num-of-products {
+        color: $c-white;
+        font-size: 9px;
     }
 }

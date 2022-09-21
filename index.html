@@ -11,7 +11,7 @@
 </head>
 <body>
 
-<!-- header and hamburger menu taken from https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
+<!-- 'header' and 'hamburger menu' har haft denna som förlaga https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
     <header class="header">
             <div class="header__links-container">
                 <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
@@ -27,11 +27,10 @@
                 <ul class="hamburger-menu__menu-list">
                     <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
                     <li><a class="hamburger-menu__list-item" href="#">Shop by Category</a> </li>
-                    <li><a class="hamburger-menu__list-item" href="#">New Arrivals</a></li>
+                    <li><a class="hamburger-menu__list-item" href="#new-arrivals">New Arrivals</a></li>
                     <li><a class="hamburger-menu__list-item" href="#">Newsletter</a></li>
                     <li><a class="hamburger-menu__list-item" href="#">Contact Us</a></li>
                     <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
-
                 </ul>
             </nav>
             <nav class="header__logo-container">
@@ -40,6 +39,7 @@
     </header> 
 
     <!-- main content -->
+
     <main>
         <section class="showcase">
             <img class="showcase__image" src="images/showcase-image.svg" alt="">
@@ -55,28 +55,139 @@
         </section>
 
         <!-- service info -->
-        <section>
-            <div class="product-card">
-                <img class="product-card__product-image" src="images/products/blue-silk-flare-sleeved-top.png" alt="Blue silk flare sleeved top">
-                <div class="product-card__menu-body">
-                    <div class="product-card__product-info-container">
-                        <h3 class="product-card__product-name">Blue silk flare sleeved top</h3>
-                        <p class="product-card__product-category">Fashion</p>
-                        <p class="product-card__old-price">$50.00</p>
-                        <p class="product-card__new-price">$20.00</p>
+
+        <section class="page-section--content-centered">
+            <div class="page-section__content-container--small">
+                <div class="page-section__section-header">
+                    <h2 class="page-section__section-title page-section__section-title--small">Click below to learn more about our <span class="theme-color">world class</span> service</h2>
+                </div>
+                <div class="grid grid--four-columns">
+                    <a href="#" class="service-card">
+                        <img src="images/icons/free-shipping-icon.svg" alt="" class="service-card__icon">
+                    </a>
+                    <a href="#" class="service-card">
+                        <img src="images/icons/24-7-icon.svg" alt="" class="service-card__icon">
+                    </a>
+                    <a href="#" class="service-card">
+                        <img src="images/icons/online-payment-icon.svg" alt="" class="service-card__icon">
+                    </a>
+                    <a href="#" class="service-card">
+                        <img src="images/icons/fast-delivery-icon.svg" alt="" class="service-card__icon">
+                    </a>
+                </div>
+            </div>             
+        </section>
+
+        <!-- Shop by Category -->
+
+        <section class="page-section page-section--content-centered">
+            <div class="page-section__content-container">
+                <div class="page-section__section-header">
+                    <h2 class="page-section__section-title">SHOP BY <span class="theme-color">CATEGORY</span></h2>
+                    <img src="images/wave-line.svg" alt="wavy line" class="page-section__line">
+                    <p class="page-section__section-preamble">We always give you the best product in a fast and reliable way</p>
+                </div>
+                <!-- grid -->
+                <div class="grid grid--two-by-two">
+                    <!-- category card -->
+                    <div class="category-card">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Men</h3>
+                                <p class="category-card__num-of-products">26 products</p>
+                            </div>
+                        </div>
                     </div>
-                    <ul class="product-card__icon-menu">
-                        <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
-                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
-                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
-                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
-                        <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
-                    </ul>
+                    <!-- category card -->
+                    <div class="category-card">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Kids</h3>
+                                <p class="category-card__num-of-products">19 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- category card -->
+                    <div class="category-card">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Women</h3>
+                                <p class="category-card__num-of-products">32 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- category card -->
+                    <div class="category-card">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Shoes</h3>
+                                <p class="category-card__num-of-products">9 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- category card -->
+
                 </div>
             </div>
+            
 
         </section>
-        <div class="extraspace"></div>
+
+        <!-- New Arrivals -->
+        <section class="page-section page-section--content-centered" id="new-arrivals">
+            <div class="page-section__content-container">
+                <div class="page-section__section-header">
+                    <h2 class="page-section__section-title">NEW <span class="theme-color">ARRIVALS</span></h2>
+                    <img src="images/wave-line.svg" alt="wavy line" class="page-section__line">
+                    <p class="page-section__section-preamble">Check out our latest products from top fashion designers</p>
+                </div>
+                    <!-- grid -->
+                <div class="grid grid--two-columns">
+                    <!-- product-card -->
+                    <div class="product-card">
+                        <img class="product-card__product-image" src="images/products/blue-silk-flare-sleeved-top.png" alt="Blue silk flare sleeved top">
+                        <div class="product-card__menu-body">
+                            <div class="product-card__product-info-container">
+                                <h3 class="product-card__product-name">Blue silk flare sleeved top</h3>
+                                <p class="product-card__product-category">Fashion</p>
+                                <p class="product-card__old-price">$50.00</p>
+                                <p class="product-card__new-price">$20.00</p>
+                            </div>
+                            <ul class="product-card__icon-menu">
+                                <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- product-card -->
+                    <div class="product-card">
+                        <img class="product-card__product-image" src="images/products/new-look-mens-coat.png" alt="Blue silk flare sleeved top">
+                        <div class="product-card__menu-body">
+                            <div class="product-card__product-info-container">
+                                <h3 class="product-card__product-name">New look men's coat</h3>
+                                <p class="product-card__product-category">Fashion</p>
+                                <p class="product-card__old-price product-card__old-price--hidden">$50.00</p>
+                                <p class="product-card__new-price">$40.00</p>
+                            </div>
+                            <ul class="product-card__icon-menu">
+                                <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            
+
+
     </main>
        
 </body>
