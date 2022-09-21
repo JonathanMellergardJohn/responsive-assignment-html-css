@@ -51,9 +51,21 @@ ul {
   background-color: #20D3C2;
   color: #FFFFFF;
 }
+.button--dark {
+  background-color: #0E153D;
+  color: #FFFFFF;
+}
+.button--right-margin {
+  margin-right: 15px;
+}
 
 .theme-color {
   color: #20D3C2;
+}
+
+.strong-emphasis {
+  font-size: 36px;
+  font-weight: 700;
 }
 
 /* Header */
@@ -185,8 +197,8 @@ ul {
 }
 .showcase__page-title {
   font-family: "Play", sans-serif;
-  font-size: 2.5rem;
-  margin: 10%;
+  font-size: 60px;
+  margin: 0;
 }
 .showcase__text {
   font-size: 0.8rem;
@@ -321,6 +333,7 @@ ul {
   margin-bottom: 1rem;
 }
 .page-section__section-title {
+  text-align: center;
   font-family: "Play", sans-serif;
   font-size: 36px;
   font-weight: 700;
@@ -403,4 +416,54 @@ ul {
 .category-card__num-of-products {
   color: #FFFFFF;
   font-size: 9px;
+}
+
+.banner-section {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+}
+.banner-section--grey {
+  background-color: #CCCCCC;
+}
+.banner-section--dark {
+  background-color: #0E153D;
+}
+.banner-section__content-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.banner-section__offer-container {
+  background-color: #20D3C2;
+  color: #FFFFFF;
+  margin: 0 15px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.banner-section__offer-container--align-top {
+  height: auto;
+  align-self: flex-start;
+}
+.banner-section__offer-large-text {
+  text-align: center;
+  font-family: "Play", sans-serif;
+  padding: 0 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.banner-section__offer-small-text {
+  margin-bottom: 15px;
+}
+.banner-section__info-container {
+  color: #FFFFFF;
+  display: none;
+}
+.banner-section__info-text {
+  width: 300px;
+  margin-bottom: 15px;
 }/*# sourceMappingURL=style.css.map */
