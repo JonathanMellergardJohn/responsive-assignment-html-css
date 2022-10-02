@@ -11,85 +11,113 @@
 </head>
 <body>
 
-<!-- 'header' and 'hamburger menu' har haft denna som förlaga https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
-    <header class="header">
-            <div class="header__links-container">
-                <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
-                <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
-                <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
-                <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
+    <!-- {[( HEADER )]} -->
+
+    <!-- 'header' and 'hamburger menu' har haft denna som förlaga
+    https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
+        <nav class="header">
+            <div class="container">
+                <div class="header__links-container">
+                    <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
+                    <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
+                    <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
+                    <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
+                </div>
+
+                <input class="hamburger-menu__checkbox" type="checkbox" id="hamburger-menu__checkbox"/>
+                <label class="hamburger-menu__hamburger" for="hamburger-menu__checkbox"><span class="hamburger-menu__hamb-line"></span></label>
+
+                <nav class="hamburger-menu__dropdown-body">
+                    <ul class="hamburger-menu__menu-list">
+                        <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Shop by Category</a> </li>
+                        <li><a class="hamburger-menu__list-item" href="#new-arrivals">New Arrivals</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Newsletter</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Contact Us</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
+                    </ul>
+                </nav>
+                
             </div>
+        </nav> 
+        <nav class="header__logo-container">
+            <img class="header__logo-image" src="images/logotype.svg" alt="">
+        </nav>
 
-            <input class="hamburger-menu__checkbox" type="checkbox" id="hamburger-menu__checkbox"/>
-            <label class="hamburger-menu__hamburger" for="hamburger-menu__checkbox"><span class="hamburger-menu__hamb-line"></span></label>
-
-            <nav class="hamburger-menu__dropdown-body">
-                <ul class="hamburger-menu__menu-list">
-                    <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
-                    <li><a class="hamburger-menu__list-item" href="#">Shop by Category</a> </li>
-                    <li><a class="hamburger-menu__list-item" href="#new-arrivals">New Arrivals</a></li>
-                    <li><a class="hamburger-menu__list-item" href="#">Newsletter</a></li>
-                    <li><a class="hamburger-menu__list-item" href="#">Contact Us</a></li>
-                    <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
-                </ul>
-            </nav>
-            <nav class="header__logo-container">
-                <img class="header__logo-image" src="images/logotype.svg" alt="">
-            </nav>
-    </header> 
-
-    <!-- main content -->
+    <!-- {[( MAIN CONTEN )]} -->
 
     <main>
+
+        <!-- SHOWCASE -->
+
         <section class="showcase">
-            <img class="showcase__image" src="images/showcase-image.svg" alt="">
-            <div class="showcase__text-container">
-                <h1 class="showcase__page-title">Shopping is <span class="showcase--emphasize-text">MORE FUN</span></h1>
-                <p class="showcase__text">Vivamus dignissim a ex eu ornare. 
-                Ut fermentum orci vel diam ultricies faucibus. 
-                Quisque quis erat sed
-                </p>
-                <a class="showcase__button button" href="#">SHOP NOW</a>
-            </div>
+            
+                <div class="showcase__image-container">
+                    <img class="showcase__image" src="images/showcase-image.svg" alt="">
+                </div>      
+                <div class="showcase__text-container">
+                    <h1 class="showcase__page-title">Shopping is <span class="showcase--emphasize-text">MORE FUN</span></h1>
+                    <p class="showcase__text">Vivamus dignissim a ex eu ornare. 
+                    Ut fermentum orci vel diam ultricies faucibus. 
+                    Quisque quis erat sed
+                    </p>
+                    <a class="showcase__button button" href="#">SHOP NOW</a>
+                </div>
             
         </section>
 
-        <!-- service info -->
+        <!-- SERIVICE INFO -->
 
-        <section class="page-section--content-centered">
-            <div class="page-section__content-container--small">
+        <section class="page-section page-section--white">
+            <div class="page-section__container">
                 <div class="page-section__section-header">
                     <h2 class="page-section__section-title page-section__section-title--small">Click below to learn more about our <span class="theme-color">world class</span> service</h2>
                 </div>
                 <div class="grid grid--four-columns">
                     <a href="#" class="service-card">
                         <img src="images/icons/free-shipping-icon.svg" alt="" class="service-card__icon">
+                        <div class="service-card__text-container">
+                            <h3 class="service-card__heading">Free shipping</h3>
+                            <p class="service-card__text">For a local customer, we provide free shipping facility</p>
+                        </div>
                     </a>
                     <a href="#" class="service-card">
                         <img src="images/icons/24-7-icon.svg" alt="" class="service-card__icon">
+                        <div class="service-card__text-container">
+                            <h3 class="service-card__heading">24/7 support</h3>
+                            <p class="service-card__text">For any inquiry, we are available 24 hours every day</p>
+                        </div>
                     </a>
                     <a href="#" class="service-card">
                         <img src="images/icons/online-payment-icon.svg" alt="" class="service-card__icon">
+                        <div class="service-card__text-container">
+                            <h3 class="service-card__heading">Online payment</h3>
+                            <p class="service-card__text">You can pay easily with our online payment system</p>
+                        </div>
                     </a>
                     <a href="#" class="service-card">
                         <img src="images/icons/fast-delivery-icon.svg" alt="" class="service-card__icon">
+                        <div class="service-card__text-container">
+                            <h3 class="service-card__heading">Fast delivery</h3>
+                            <p class="service-card__text">We understand your urgency and we deliver in a fast way</p>
+                        </div>
                     </a>
                 </div>
             </div>             
         </section>
 
-        <!-- Shop by Category -->
+        <!-- SHOP BY CATEGORY -->
 
         <section class="page-section page-section--content-centered">
-            <div class="page-section__content-container">
+            <div class="page-section__container">
                 <div class="page-section__section-header">
                     <h2 class="page-section__section-title">SHOP BY <span class="theme-color">CATEGORY</span></h2>
                     <img src="images/wave-line.svg" alt="wavy line" class="page-section__line">
                     <p class="page-section__section-preamble">We always give you the best product in a fast and reliable way</p>
                 </div>
-                <!-- grid -->
+                <!-- Grid -->
                 <div class="grid grid--two-by-two">
-                    <!-- category card -->
+                    <!-- Category Card -->
                     <div class="category-card">
                         <div class="category-card__menu-body">
                             <div class="category-card__category-info-container">
@@ -98,7 +126,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- category card -->
+                    <!-- Category Card -->
                     <div class="category-card">
                         <div class="category-card__menu-body">
                             <div class="category-card__category-info-container">
@@ -107,7 +135,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- category card -->
+                    <!-- Category Card -->
                     <div class="category-card">
                         <div class="category-card__menu-body">
                             <div class="category-card__category-info-container">
@@ -116,7 +144,7 @@
                             </div>
                         </div>
                     </div>
-                    <!-- category card -->
+                    <!-- Category Card -->
                     <div class="category-card">
                         <div class="category-card__menu-body">
                             <div class="category-card__category-info-container">
@@ -131,17 +159,18 @@
 
         </section>
 
-        <!-- New Arrivals -->
+        <!-- NEW ARRIVALS -->
+
         <section class="page-section page-section--content-centered" id="new-arrivals">
-            <div class="page-section__content-container">
+            <div class="page-section__container">
                 <div class="page-section__section-header">
                     <h2 class="page-section__section-title">NEW <span class="theme-color">ARRIVALS</span></h2>
                     <img src="images/wave-line.svg" alt="wavy line" class="page-section__line">
                     <p class="page-section__section-preamble">Check out our latest products from top fashion designers</p>
                 </div>
-                    <!-- grid -->
-                <div class="grid grid--two-columns">
-                    <!-- product-card -->
+                <!-- Grid -->
+                <div class="grid grid--2-to-3-columns">
+                    <!-- Product Card -->
                     <div class="product-card">
                         <img class="product-card__product-image" src="images/products/blue-silk-flare-sleeved-top.png" alt="Blue silk flare sleeved top">
                         <div class="product-card__menu-body">
@@ -160,7 +189,7 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- product-card -->
+                    <!-- Product Card -->
                     <div class="product-card">
                         <img class="product-card__product-image" src="images/products/new-look-mens-coat.png" alt="Blue silk flare sleeved top">
                         <div class="product-card__menu-body">
@@ -179,13 +208,33 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- Product Card -->
+                    <div class="product-card product-card--extra">
+                        <img class="product-card__product-image" src="images/products/circle-pattern-girls-shirt.png" alt="Blue silk flare sleeved top">
+                        <div class="product-card__menu-body">
+                            <div class="product-card__product-info-container">
+                                <h3 class="product-card__product-name">Circle pattern girls shirt</h3>
+                                <p class="product-card__product-category">Fashion</p>
+                                <p class="product-card__old-price product-card__old-price--hidden">$50.00</p>
+                                <p class="product-card__new-price">$40.00</p>
+                            </div>
+                            <ul class="product-card__icon-menu">
+                                <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section> <!-- end New Arrivals  -->
+        </section> 
 
-        <!-- banner section -->
-        <section class="banner-section banner-section--grey">
-            <div class="banner-section__content-container">
+        <!-- BANNER 30% OFF -->
+
+        <section class="page-section page-section--grey">
+            <div class="page-section__container">
                 <div class="banner-section__offer-container">
                     <h2 class="banner-section__offer-large-text"><span class="strong-emphasis">30%</span>  OFF </h2>
                     <p class="banner-section__offer-small-text">FOR NEW CUSTOMERS</p>
@@ -203,19 +252,19 @@
 
                 </div>
             </div>
-        </section> <!-- end banner section -->
+        </section> 
 
-        <!-- Featured Products -->
+        <!-- FEATURED PRODUCTS -->
 
         <section class="page-section page-section--content-centered" id="new-arrivals">
-            <div class="page-section__content-container">
+            <div class="page-section__container">
                 <div class="page-section__section-header">
                     <h2 class="page-section__section-title">FEATURED <span class="theme-color">PRODUCTS</span></h2>
                     <img src="images/wave-line.svg" alt="wavy line" class="page-section__line">
                     <p class="page-section__section-preamble">Check out our monthly featured products from top brands</p>
                 </div>
                     <!-- grid -->
-                <div class="grid grid--two-columns">
+                <div class="grid grid--2-to-3-columns">
                     <!-- product-card -->
                     <div class="product-card">
                         <img class="product-card__product-image" src="images/products/winter-collection-for-womens.png" alt="Blue silk flare sleeved top">
@@ -254,11 +303,30 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- product-card -->
+                    <div class="product-card product-card--extra">
+                        <img class="product-card__product-image" src="images/products/red-womens-blazer-full.png" alt="Blue silk flare sleeved top">
+                        <div class="product-card__menu-body">
+                            <div class="product-card__product-info-container">
+                                <h3 class="product-card__product-name">Red women's blazer full</h3>
+                                <p class="product-card__product-category">Fashion</p>
+                                <p class="product-card__old-price product-card__old-price--hidden">$50.00</p>
+                                <p class="product-card__new-price">$40.00</p>
+                            </div>
+                            <ul class="product-card__icon-menu">
+                                <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section> <!-- end Featured Products  -->
+        </section> 
 
-                <!-- banner section -->
+        <!-- BANNER FLASH SALE -->
         <section class="banner-section banner-section--dark">
             <div class="banner-section__content-container">
                 <div class="banner-section__offer-container banner-section__offer-container--align-top">
@@ -268,20 +336,20 @@
                 <a href="#" class="button button--right-margin">SHOP NOW</a>
                 <!-- add timer for larger viewports -->
             </div>
-        </section> <!-- end banner section -->
+        </section>
 
-        <!-- Top Sellers -->
+        <!-- TOP SELLERS -->
 
         <section class="page-section page-section--content-centered" id="new-arrivals">
-            <div class="page-section__content-container">
+            <div class="page-section__container">
                 <div class="page-section__section-header">
                     <h2 class="page-section__section-title">TOP <span class="theme-color">SELLERS</span></h2>
                     <img src="images/wave-line.svg" alt="wavy line" class="page-section__line">
                     <p class="page-section__section-preamble">Check out our weekly top sellers in all category</p>
                 </div>
-                    <!-- grid -->
-                <div class="grid grid--two-columns">
-                    <!-- product-card -->
+                    <!-- Grid -->
+                <div class="grid grid--2-to-3-columns">
+                    <!-- Product Card -->
                     <div class="product-card">
                         <img class="product-card__product-image" src="images/products/mens-denim-shirts-full.png" alt="Blue silk flare sleeved top">
                         <div class="product-card__menu-body">
@@ -300,7 +368,7 @@
                             </ul>
                         </div>
                     </div>
-                    <!-- product-card -->
+                    <!-- Product Card -->
                     <div class="product-card">
                         <img class="product-card__product-image" src="images/products/new-look-mens-sneakers.png" alt="Blue silk flare sleeved top">
                         <div class="product-card__menu-body">
@@ -319,12 +387,64 @@
                             </ul>
                         </div>
                     </div>
+                    <!-- Product Card -->
+                    <div class="product-card product-card--extra">
+                        <img class="product-card__product-image" src="images/products/womens-leather-bag-and-shoes.png" alt="Blue silk flare sleeved top">
+                        <div class="product-card__menu-body">
+                            <div class="product-card__product-info-container">
+                                <h3 class="product-card__product-name">Women's leather bag and shoe</h3>
+                                <p class="product-card__product-category">Fashion</p>
+                                <p class="product-card__old-price product-card__old-price--hidden">$50.00</p>
+                                <p class="product-card__new-price">$40.00</p>
+                            </div>
+                            <ul class="product-card__icon-menu">
+                                <li><a class="product-card__icon product-card__icon--instock" href="#"><i class="fa-solid fa-circle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-heart"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-shuffle"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-magnifying-glass"></i></a></li>
+                                <li><a class="product-card__icon" href="#"><i class="fa-regular fa-cart-shopping"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </section> <!-- end Top Sellers  -->
-
-
+        </section>
     </main>
+
+    <!-- {[( FOOTER )]} -->
+
+        <footer class="footer">
+            <section class="page-section page-section--light-grey">
+                <div class="page-section__container">
+                    <h2 class="page-section__section-title">SUBSCRIBE <span class="theme-color">NOW</span></h2>
+                    <p class="page-section__section-preamble">Signup for awesome news about our new products and
+                    know our special discounts on products.
+                    </p>
+                    <form action="" class="subscribe-form">
+                        <input class="subscribe-form__input" type="email" name="" id="" placeholder="Enter email address">
+                        <button class="button button--theme">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+            <section class="page-section page-section--grey">
+                <div class="page-section__container">
+                    <div class="page-section__row">
+                        <a href="#" class="links__social-media-icons fa-brands fa-facebook-f"></a>
+                        <a href="#" class="links__social-media-icons fa-brands fa-twitter"></a>
+                        <a href="#" class="links__social-media-icons fa-brands fa-instagram"></a>
+                        <a href="#" class="links__social-media-icons fa-brands fa-pinterest-p"></a>
+                        <a href="#" class="links__social-media-icons fa-brands fa-youtube"></a>
+                    </div>
+                    <div class="page-section__row">
+                        <a class="links__text" href="#">Contact us</a>
+                        <a class="links__text" href="#">FAQs</a>
+                    </div>
+                </div>
+            </section>
+            <section class="page-section page-section--dark">
+                <span class="c-white">© Copyright 2022 Kenkata</span>
+            </section>
+        </footer>
        
 </body>
 </html>
