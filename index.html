@@ -15,10 +15,12 @@
 
     <!-- 'header' and 'hamburger menu' har haft denna som förlaga
     https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
+      
+    <header class="header-section">
         <nav class="header">
             <div class="container">
                 <div class="header__links-container">
-                    <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
+                    <a class="header__link header__link--first-link" href="login.html"><i class="fa-light fa-user"></i></a>
                     <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
                     <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
                     <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
@@ -37,13 +39,21 @@
                         <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
                     </ul>
                 </nav>
-                
+
             </div>
         </nav> 
-        <nav class="header__logo-container">
-            <img class="header__logo-image" src="images/logotype.svg" alt="">
+        <nav class="header__logo-section">
+            <div class="container container--padding-small">
+                <div class="row row--justify-between">
+                    <img class="header__logo-image" src="images/logotype.svg" alt="">
+                    <form action="" class="search-form">
+                        <input class="search-form__input" type="text" name="" id="" placeholder="Search . . .">
+                        <button class="button button--theme search-form__button"><i class="fa-light fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
         </nav>
-
+    </header>
     <!-- {[( MAIN CONTEN )]} -->
 
     <main>
@@ -51,7 +61,7 @@
         <!-- SHOWCASE -->
 
         <section class="showcase">
-            
+            <div class="container">
                 <div class="showcase__image-container">
                     <img class="showcase__image" src="images/showcase-image.svg" alt="">
                 </div>      
@@ -63,7 +73,7 @@
                     </p>
                     <a class="showcase__button button" href="#">SHOP NOW</a>
                 </div>
-            
+            </div>
         </section>
 
         <!-- SERIVICE INFO -->
@@ -116,7 +126,7 @@
                     <p class="page-section__section-preamble">We always give you the best product in a fast and reliable way</p>
                 </div>
                 <!-- Grid -->
-                <div class="grid grid--two-by-two">
+                <div class="grid grid--2-by-2-to-3-by-5">
                     <!-- Category Card -->
                     <div class="category-card">
                         <div class="category-card__menu-body">
@@ -127,7 +137,7 @@
                         </div>
                     </div>
                     <!-- Category Card -->
-                    <div class="category-card">
+                    <div class="category-card category-card--kids">
                         <div class="category-card__menu-body">
                             <div class="category-card__category-info-container">
                                 <h3 class="category-card__category-name">Kids</h3>
@@ -136,8 +146,8 @@
                         </div>
                     </div>
                     <!-- Category Card -->
-                    <div class="category-card">
-                        <div class="category-card__menu-body">
+                    <div class="category-card category-card--women">
+                        <div class="category-card__menu-body category-card__menu-body--women">
                             <div class="category-card__category-info-container">
                                 <h3 class="category-card__category-name">Women</h3>
                                 <p class="category-card__num-of-products">32 products</p>
@@ -145,11 +155,38 @@
                         </div>
                     </div>
                     <!-- Category Card -->
-                    <div class="category-card">
-                        <div class="category-card__menu-body">
+                    <div class="category-card  category-card--shoes">
+                        <div class="category-card__menu-body category-card__menu-body--shoes">
                             <div class="category-card__category-info-container">
                                 <h3 class="category-card__category-name">Shoes</h3>
                                 <p class="category-card__num-of-products">9 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category Card -->
+                    <div class="category-card category-card--hidden">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Hats</h3>
+                                <p class="category-card__num-of-products">7 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category Card -->
+                    <div class="category-card category-card--hidden category-card--sunglasses">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Sunglasses</h3>
+                                <p class="category-card__num-of-products">25 products</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Category Card -->
+                    <div class="category-card category-card--hidden">
+                        <div class="category-card__menu-body">
+                            <div class="category-card__category-info-container">
+                                <h3 class="category-card__category-name">Watches</h3>
+                                <p class="category-card__num-of-products">7 products</p>
                             </div>
                         </div>
                     </div>
@@ -234,11 +271,11 @@
         <!-- BANNER 30% OFF -->
 
         <section class="page-section page-section--grey">
-            <div class="page-section__container">
+            <div class="page-section__container page-section__container--justify-btw">
                 <div class="banner-section__offer-container">
                     <h2 class="banner-section__offer-large-text"><span class="strong-emphasis">30%</span>  OFF </h2>
                     <p class="banner-section__offer-small-text">FOR NEW CUSTOMERS</p>
-                    <a href="#" class="button button--dark">SHOP NOW</a>
+                    <a href="#" class="button button--dark button--bottom-margin">SHOP NOW</a>
                 </div>
                 <div class="banner-section__info-container">
                     <p class="banner-section__info-text">
@@ -333,7 +370,27 @@
                     <h2 class="banner-section__offer-large-text"><span class="strong-emphasis">FLASH <br>SALE</span></h2>
                     <p class="banner-section__offer-small-text">UP TO 50% OFF</p>
                 </div>
-                <a href="#" class="button button--right-margin">SHOP NOW</a>
+                <div class="banner-section__column">
+                    <div class="banner-section__shop-clock">
+                        <div class="banner-section__shop-clock-circle">
+                            <p class="banner-section__clock-number">7</p>
+                            <p class="banner-section__clock-number-label">days</p>
+                        </div>
+                        <div class="banner-section__shop-clock-circle">
+                            <p class="banner-section__clock-number">23</p>
+                            <p class="banner-section__clock-number-label">hours</p>
+                        </div>
+                        <div class="banner-section__shop-clock-circle">
+                            <p class="banner-section__clock-number">46</p>
+                            <p class="banner-section__clock-number-label">minutes</p>
+                        </div>
+                        <div class="banner-section__shop-clock-circle">
+                            <p class="banner-section__clock-number">12</p>
+                            <p class="banner-section__clock-number-label">seconds</p>
+                        </div>
+                    </div>
+                    <a href="#" class="button button--right-margin">SHOP NOW</a>
+                </div>
                 <!-- add timer for larger viewports -->
             </div>
         </section>
@@ -348,11 +405,11 @@
                     <p class="page-section__section-preamble">Check out our weekly top sellers in all category</p>
                 </div>
                     <!-- Grid -->
-                <div class="grid grid--2-to-3-columns">
+                <div class="grid grid--2-to-3-to-4-columns">
                     <!-- Product Card -->
-                    <div class="product-card">
+                    <div class="product-card product-card--top-sell-resize-large">
                         <img class="product-card__product-image" src="images/products/mens-denim-shirts-full.png" alt="Blue silk flare sleeved top">
-                        <div class="product-card__menu-body">
+                        <div class="product-card__menu-body product-card__menu-body--top-sell-resize-large">
                             <div class="product-card__product-info-container">
                                 <h3 class="product-card__product-name">Men's denim shirts full</h3>
                                 <p class="product-card__product-category">Fashion</p>
@@ -369,13 +426,13 @@
                         </div>
                     </div>
                     <!-- Product Card -->
-                    <div class="product-card">
+                    <div class="product-card product-card--top-sell-resize-small">
                         <img class="product-card__product-image" src="images/products/new-look-mens-sneakers.png" alt="Blue silk flare sleeved top">
                         <div class="product-card__menu-body">
                             <div class="product-card__product-info-container">
                                 <h3 class="product-card__product-name">New look men's sneakers</h3>
                                 <p class="product-card__product-category">Fashion</p>
-                                <p class="product-card__old-price product-card__old-price--hidden">$50.00</p>
+                                <p class="product-card__old-price product-card__old-price--hidden product-card__old-price--view-reposition">$50.00</p>
                                 <p class="product-card__new-price">$40.00</p>
                             </div>
                             <ul class="product-card__icon-menu">
@@ -388,13 +445,13 @@
                         </div>
                     </div>
                     <!-- Product Card -->
-                    <div class="product-card product-card--extra">
+                    <div class="product-card product-card--extra product-card--top-sell-resize-small">
                         <img class="product-card__product-image" src="images/products/womens-leather-bag-and-shoes.png" alt="Blue silk flare sleeved top">
                         <div class="product-card__menu-body">
                             <div class="product-card__product-info-container">
                                 <h3 class="product-card__product-name">Women's leather bag and shoe</h3>
                                 <p class="product-card__product-category">Fashion</p>
-                                <p class="product-card__old-price product-card__old-price--hidden">$50.00</p>
+                                <p class="product-card__old-price product-card__old-price--hidden product-card__old-price--view-reposition">$50.00</p>
                                 <p class="product-card__new-price">$40.00</p>
                             </div>
                             <ul class="product-card__icon-menu">

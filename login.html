@@ -8,37 +8,81 @@
     <script src="https://kit.fontawesome.com/41c8b474e2.js" crossorigin="anonymous"></script>
    <link href="style.css" rel="stylesheet">
 </head>
+
+<!-- Allmänna kommentarer: 
+Var framförallt två saker jag fokuserade på i uppgiften. För det första att experiementera och lära 
+lite om responsivitet. För det andra att hitta en bra struktur på min CSS. 
+
+Gällande responsiviteten blev jag ganska nöjd, lyckades få in anpassning för några olika skärmstorlekar.
+Började om med sidan 'från scratch' och byggde upp 'mobile first'. Var mkt lärorikt och visade sig vara
+mycket mindre komplicerat än jag trodde att öka komplexiteten på större skärmar.
+
+Angående struktur på CSS tog jag nytta av Sass, framförallt för att kunna 'nest:a' olika regler vilket 
+jag tycker skapar lite bättre ordning. Jag försökte även använda mig av BEM för att namnge klasserna.
+Gick inte helt i hamn med CSS-strukturen, skulle egentligen vilja gå igenom hela min CSS och faktorera 
+om ett antal klasser etc. Men det hanns inte med. Var dock lärorrikt att läsa upp om olika metodologier
+och att försöka applicera.
+
+Ytterligare en kommentar är kanske att jag valde att INTE använda bootstrap för uppgiften. Velade lite
+fram och tillbaka men landade till slut i att det var mer lärorikt just i början att försöka fokusera på
+css utan bootstrap, upplevde att bootstrap gör massa grejer som jag inte riktigt fattar. Bättre då ha 
+koll på hur css funkar för att sedan lära sig bootstrap längre fram. 
+-->
+
+
 <body>
     <!-- {[( HEADER )]} -->
 
+    <!-- Har som synes tagit mig vissa friheter med designen, i första hand gäller detta 'header'
+         Social media links flyttades allihop till 'footer' istället, dels för att det blev för 
+         rörigt, dels för att det verkar vanligt på websidor att göra så. 'Browse by category'
+         tog jag bort helt och ersatte med en 'hamburger menu' som har ett alternativ som är 
+         shop by category
+     -->
     <!-- 'header' and 'hamburger menu' har haft denna som förlaga
     https://blog.logrocket.com/create-responsive-mobile-menu-with-css-no-javascript/#styling-the-toggled-menu-icon -->
     
-    <header class="header">
-        <div class="header__links-container">
-            <a class="header__link" href="#"><i class="fa-light fa-user"></i></a>
-            <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
-            <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
-            <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
-        </div>
+    <header class="header-section">
+        <nav class="header">
+            <div class="container">
+                <div class="header__links-container">
+                    <a class="header__link header__link--first-link" href="login.html"><i class="fa-light fa-user"></i></a>
+                    <a class="header__link" href="#"><i class="fa-light fa-magnifying-glass"></i></a>
+                    <a class="header__link" href="#"><i class="fa-light fa-heart"></i></a>
+                    <a class="header__link" href="#"><i class="fa-light fa-bag-shopping"></i></a>
+                </div>
 
-        <input class="hamburger-menu__checkbox" type="checkbox" id="hamburger-menu__checkbox"/>
-        <label class="hamburger-menu__hamburger" for="hamburger-menu__checkbox"><span class="hamburger-menu__hamb-line"></span></label>
+                <input class="hamburger-menu__checkbox" type="checkbox" id="hamburger-menu__checkbox"/>
+                <label class="hamburger-menu__hamburger" for="hamburger-menu__checkbox"><span class="hamburger-menu__hamb-line"></span></label>
 
-        <nav class="hamburger-menu__dropdown-body">
-            <ul class="hamburger-menu__menu-list">
-                <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
-                <li><a class="hamburger-menu__list-item" href="#">Shop by Category</a> </li>
-                <li><a class="hamburger-menu__list-item" href="#new-arrivals">New Arrivals</a></li>
-                <li><a class="hamburger-menu__list-item" href="#">Newsletter</a></li>
-                <li><a class="hamburger-menu__list-item" href="#">Contact Us</a></li>
-                <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
-            </ul>
+                <nav class="hamburger-menu__dropdown-body">
+                    <ul class="hamburger-menu__menu-list">
+                        <li><a class="hamburger-menu__list-item" href="#">Service Benefits</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Shop by Category</a> </li>
+                        <li><a class="hamburger-menu__list-item" href="#new-arrivals">New Arrivals</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Newsletter</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Contact Us</a></li>
+                        <li><a class="hamburger-menu__list-item" href="#">Social Media</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+        </nav> 
+        <nav class="header__logo-section">
+            <div class="container container--padding-small">
+                <div class="row row--justify-between">
+                    <img class="header__logo-image" src="images/logotype.svg" alt="">
+                    <form action="" class="search-form">
+                        <input class="search-form__input" type="text" name="" id="" placeholder="Search . . .">
+                        <button class="button button--theme search-form__button"><i class="fa-light fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+            </div>
         </nav>
-        <nav class="header__logo-container">
-            <img class="header__logo-image" src="images/logotype.svg" alt="">
-        </nav>
-    </header> 
+    </header>
+
+   <!-- {[( MAIN CONTENT )]} -->
+
     <main>
         <section class="section--theme-dark">
             <div class="container container--padding-small">
@@ -47,7 +91,7 @@
                         <h2 class="heading-medium--color-theme">My Account</h2>
                     </div>
                     <div class="column">
-                        <p class="text--white">Home  /  My Account</p>
+                        <p class="text--white"><a href="index.html"> <span class="theme-color"> Home </span></a> /  My Account</p>
                     </div>
                 </div>
             </div>
